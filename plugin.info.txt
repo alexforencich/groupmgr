@@ -1,0 +1,7 @@
+base   groupmgr
+author Alex Forencich
+email  alex@alexforencich.com
+date   2010-11-28
+name   groupmgr plugin
+desc   Embeddable group manager
+url    http://www.alexforencich.com/
