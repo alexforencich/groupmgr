@@ -1,0 +1,46 @@
+groupmgr
+========
+
+_groupmgr_ is a simple group manager plugin for dokuwiki.  It allows easy
+modification of group membership by non-admins.  Configured properly, it
+simplifies management of collaborative projects.
+
+Installation
+------------
+
+Unzip into lib/plugins directory
+
+Syntax
+------
+
+Syntax:
+~~GROUPMGR|[groups to manage]|[allowed users and groups]~~
+
+Examples
+--------
+
+~~GROUPMGR|posters|@moderators~~
+Members of group 'posters' can be managed by group 'moderators'
+
+~~GROUPMGR|groupa, groupb|joe, @admin~~
+Members of 'groupa' and 'groupb' can be managed by user 'joe'
+and members of the group 'admin'
+
+Notes:
+
+1. Super user groups can only be managed by super users
+2. forbidden_groups configuration setting specifies groups that cannot be
+   edited with the plugin
+3. Users cannot remove themselves from the group that grants them access
+   to the group manager (including admins)
+4. The conf_namespace option specifies a separate namespace for configuration.
+   When the config namespace is used, a placeholder tag (~~GROUPMGR~~) can be
+   used in the actual page while the full tag is placed in the configuration
+   namespace at config_namespace:ID
+5. If require_conf_namespace is set, all configuration options placed in the
+   page are ignored, necesitating the use of the configuration namespace.
+   For security reasons, this is the default configuration.
+
+
+
+
