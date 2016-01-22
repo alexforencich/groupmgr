@@ -90,7 +90,7 @@ class syntax_plugin_groupmgr extends DokuWiki_Syntax_Plugin {
     /**
      * Handle match
      */
-    function handle($match, $state, $pos, &$handler){
+    function handle($match, $state, $pos, Doku_Handler $handler){
         $data = array(null, $state, $pos);
         
         if (strlen($match) == 12)
@@ -121,7 +121,7 @@ class syntax_plugin_groupmgr extends DokuWiki_Syntax_Plugin {
     /**
      * Render it
      */
-    function render($mode, &$renderer, $data) {
+    function render($mode, Doku_Renderer $renderer, $data) {
         global $auth;
         global $lang;
         global $INFO;
